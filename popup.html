@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 250px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 14px;
+      margin: 0;
+      background: #f8f9fa;
+      color: #202124;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 10px 14px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #1557b0;
+    }
+    button:disabled {
+      background-color: #dadce0;
+      cursor: not-allowed;
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.4;
+      color: #5f6368;
+    }
+  </style>
+</head>
+<body>
+  <h3>📥 Classroom Downloader</h3>
+  <div style="margin-bottom: 12px;">
+    <label style="font-size: 11px; font-weight: 600; color: #5f6368; display: block; margin-bottom: 4px;">Guardar en subcarpeta (dentro de Descargas):</label>
+    <input type="text" id="targetFolder" placeholder="Ej: Sistemas de Computacion" style="width: 100%; box-sizing: border-box; padding: 7px 8px; border: 1px solid #dadce0; border-radius: 4px; font-size: 12px;">
+  </div>
+  <button id="btnDownload">Descargar Todo</button>
+  <button id="btnCancel" style="margin-top: 6px; background-color: #d93025; color: white; border: none; padding: 7px 10px; font-size: 11px;">⏹️ Detener descarga activa</button>
+  <button id="btnOpenSettings" style="margin-top: 6px; background-color: #ffffff; color: #1a73e8; border: 1px solid #dadce0; box-shadow: none; padding: 7px 10px; font-size: 11px;">⚙️ Cambiar carpeta principal de Chrome</button>
+  <div id="status">Abrí la pestaña de Classroom con los temas desplegados y hacé clic.</div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Classroom All Downloader",
+  "version": "1.0",
+  "description": "Descarga todos los materiales de Google Classroom en un clic usando la API nativa de descargas de Chrome.",
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
